@@ -477,7 +477,7 @@ Devices report property data in the format defined in the product model to the p
        service_property = ServiceProperty()
        service_property.service_id = 'smokeDetector'
        service_property.properties = {'alarm': 10, 'smokeConcentration': 36, 'temperature': 64, 'humidity': 32}
-       services = [service_property.to_dict()]
+       services = [service_property]
    
        while True:
            device.get_client().report_properties(services, DefaultPublishActionListener())
